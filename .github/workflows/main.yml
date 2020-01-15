@@ -1,0 +1,21 @@
+name: deploy
+
+on: [push]
+#   push:
+#     tags: 
+#       - v*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Publish app to Google Cloud Storage
+      run: gsutil --help
+#       run: |
+#         # This client-secret.json is converted by GCP_SA_KEY.
+#         gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
+#         gcloud config set project ${{ secrets.PROJECT_ID }}
+#         gcloud -q app deploy app.yaml --promote
+

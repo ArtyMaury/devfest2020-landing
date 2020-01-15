@@ -16,4 +16,4 @@ jobs:
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
           CLI: gsutil
         with:
-          args: rsync -R public gs://site_statique.maury.app
+          args: rsync -R public gs://${{ secrets.GOOGLE_BUCKET_NAME }}

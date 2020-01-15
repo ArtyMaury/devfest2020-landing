@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Livraison ${{ github.event_name }}
+      - name: Livraison ${{ github.ref }}
         uses: actions-hub/gcloud@master
         env:
           PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
